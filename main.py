@@ -19,7 +19,7 @@ def output_browse_file():
 
 
 def process_file():
-    print("开始拼命为您处理文件")
+    print("开始拼命为您处理文件！")
     input_file_path = input_file.get()
     output_file_path = output_file.get()
 
