@@ -70,7 +70,7 @@ def choose(event):
 
 
 root = tk.Tk()
-root.title("Excel处理工具")
+root.title("Excel处理工具，将选中月份的列中0和空的所在行删除")
 
 input_file = tk.Entry(root, width=50)
 input_file.pack(pady=10)
@@ -94,14 +94,14 @@ root.geometry("{}x{}+{}+{}".format(width, height, x, y))  # 大小以及位置
 value = StringVar()
 value.set("请选择对应的月份")  # 默认选中CCC==combobox.current(2)
 
-values = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月", ]
+values = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
 combobox = ttk.Combobox(
     master=root,  # 父容器
     height=10,  # 高度,下拉显示的条目数量
     width=20,  # 宽度
     state="normal",  # 设置状态 normal(可选可输入)、readonly(只可选)、 disabled
     cursor="arrow",  # 鼠标移动时样式 arrow, circle, cross, plus...
-    font=("", 20),  # 字体
+    font=("", 16),  # 字体
     textvariable=value,  # 通过StringVar设置可改变的值
     values=values,  # 设置下拉框的选项
 )
